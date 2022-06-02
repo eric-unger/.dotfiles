@@ -14,3 +14,5 @@
 	pf = push --force-with-lease
 	lo = log --oneline
 	l = log --color --graph --pretty --abbrev-commit
+[core]
+	editor=vim
