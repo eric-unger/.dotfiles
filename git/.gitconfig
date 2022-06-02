@@ -1,0 +1,16 @@
+[init]
+	defaultBranch = main
+
+[user]
+	name = Eric Unger
+	email = mr.eric.unger@gmail.com
+
+[includeIf "gitdir:~/gitlab/"]
+	path = ~/gitlab/.gitconfig
+
+[alias]
+	s = status
+	p = push 
+	pf = push --force-with-lease
+	lo = log --oneline
+	l = log --color --graph --pretty --abbrev-commit
