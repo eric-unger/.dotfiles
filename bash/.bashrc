@@ -115,3 +115,8 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# asdf 
+# https://asdf-vm.com/guide/introduction.html
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
