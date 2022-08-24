@@ -116,6 +116,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
+if [ -f ~/.bash_envs ]; then
+  . ~/.bash_envs
+fi
+
 # asdf 
 # https://asdf-vm.com/guide/introduction.html
 . $HOME/.asdf/asdf.sh
