@@ -120,3 +120,17 @@ fi
 # https://asdf-vm.com/guide/introduction.html
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
+
+# Editor
+export EDITOR="/usr/bin/nvim"
+
+# Scripts directory
+export PATH="$PATH:$HOME/.bin"
+
+# PNPM
+export PNPM_HOME="$HOME/.local/share/pnpm"
+export PATH="$PNPN_HOME:$PATH"
+
+# Oracle
+export LD_LIBRARY_PATH=/usr/lib/oracle/21/client64/lib
+
