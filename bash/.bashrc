@@ -120,7 +120,7 @@ if [ -f ~/.bash_envs ]; then
   . ~/.bash_envs
 fi
 
-# asdf 
+# asdf
 # https://asdf-vm.com/guide/introduction.html
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
@@ -133,8 +133,14 @@ export PATH="$PATH:$HOME/.bin"
 
 # PNPM
 export PNPM_HOME="$HOME/.local/share/pnpm"
-export PATH="$PNPN_HOME:$PATH"
+export PATH="$PNPM_HOME:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # Oracle
 export LD_LIBRARY_PATH=/usr/lib/oracle/21/client64/lib
 
+source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/bashrc"
+
+# tabtab source for packages
+# uninstall by removing these lines
+[ -f ~/.config/tabtab/bash/__tabtab.bash ] && . ~/.config/tabtab/bash/__tabtab.bash || true
