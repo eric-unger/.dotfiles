@@ -10,9 +10,11 @@
 
 [alias]
 	s = status
-	p = push 
+	p = push
 	pf = push --force-with-lease
 	lo = log --oneline
 	l = log --color --graph --pretty --abbrev-commit
+	ca = commit --amend
+	can = commit --amend --no-edit
 [core]
 	editor=vim
