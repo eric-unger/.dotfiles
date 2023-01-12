@@ -3,7 +3,7 @@ if not status_ok then
   return
 end
 
-bufferline.setup {
+bufferline.setup({
   options = {
     numbers = "none", -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
     close_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
@@ -31,7 +31,7 @@ bufferline.setup {
     always_show_bufferline = true,
     indicator = {
       icon = "▎",
-    }
+    },
   },
   highlights = {
     fill = {
@@ -71,17 +71,17 @@ bufferline.setup {
     duplicate_selected = {
       fg = { attribute = "fg", highlight = "TabLineSel" },
       bg = { attribute = "bg", highlight = "TabLineSel" },
-      italic = true
+      italic = true,
     },
     duplicate_visible = {
       fg = { attribute = "fg", highlight = "TabLine" },
       bg = { attribute = "bg", highlight = "TabLine" },
-      italic = true
+      italic = true,
     },
     duplicate = {
       fg = { attribute = "fg", highlight = "TabLine" },
       bg = { attribute = "bg", highlight = "TabLine" },
-      italic = true
+      italic = true,
     },
 
     modified = {
@@ -109,4 +109,4 @@ bufferline.setup {
       bg = { attribute = "bg", highlight = "Normal" },
     },
   },
-}
+})

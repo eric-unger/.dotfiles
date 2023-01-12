@@ -131,7 +131,6 @@ local mappings = {
     b = { "<cmd>lua require 'harpoon.ui'.nav_prev()<cr>", "Previous" },
     m = { "<cmd>lua require 'harpoon.mark'.add_file()<cr>", "Mark" },
     o = { "<cmd>lua require 'harpoon.ui'.toggle_quick_menu()<cr>", "List" },
-
   },
   l = {
     name = "LSP",
