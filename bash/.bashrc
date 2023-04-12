@@ -145,3 +145,8 @@ source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/bashrc"
 # uninstall by removing these lines
 [ -f ~/.config/tabtab/bash/__tabtab.bash ] && . ~/.config/tabtab/bash/__tabtab.bash || true
 . "$HOME/.cargo/env"
+
+export DENO_INSTALL="/home/eric/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
+[ -x /bin/fish ] && SHELL=/bin/fish exec fish
