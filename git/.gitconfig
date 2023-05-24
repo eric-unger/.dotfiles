@@ -18,4 +18,3 @@
 	can = commit --amend --no-edit
 [core]
 	editor=nvim
-
