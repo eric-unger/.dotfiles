@@ -16,5 +16,9 @@
 	l = log --color --graph --pretty --abbrev-commit --all
 	ca = commit --amend
 	can = commit --amend --no-edit
+  co = checkout 
 [core]
 	editor=nvim
+
+[include]
+  path = ~/.gitconfig-proxy
