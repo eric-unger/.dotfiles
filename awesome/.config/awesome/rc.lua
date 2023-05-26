@@ -60,7 +60,8 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(gears.filesystem.get_themes_dir() .. "zenburn/theme.lua")
-beautiful.useless_gap = 5
+beautiful.useless_gap = 10
+beautiful.gap_single_client = false
 
 -- This is used later as the default terminal and editor to run.
 terminal = "kitty"
@@ -372,7 +373,7 @@ globalkeys = gears.table.join(
 	-- Menubar
 	awful.key({ modkey }, "p", function()
 		--menubar.show()
-		awful.spawn("rofi -show run")
+		awful.spawn("rofi -show drun")
 	end, { description = "show the menubar", group = "launcher" })
 )
 
@@ -496,7 +497,6 @@ awful.rules.rules = {
 			placement = awful.placement.no_overlap + awful.placement.no_offscreen,
 		},
 	},
-
 	-- Floating clients.
 	{
 		rule_any = {
@@ -534,7 +534,6 @@ awful.rules.rules = {
 
 	-- Add titlebars to normal clients and dialogs
 	{ rule_any = { type = { "normal", "dialog" } }, properties = { titlebars_enabled = true } },
-
 	-- Set Firefox to always map on the tag named "2" on screen 1.
 	-- { rule = { class = "Firefox" },
 	--   properties = { screen = 1, tag = "2" } },
@@ -606,3 +605,6 @@ client.connect_signal("unfocus", function(c)
 	c.border_color = beautiful.border_normal
 end)
 -- }}}
+--
+gears.wallpaper.maximized("/home/eric/Pictures/wallpapers/1.jpg")
+-- Add title bars to normal clients and dialogs
