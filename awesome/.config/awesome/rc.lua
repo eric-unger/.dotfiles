@@ -27,8 +27,8 @@ local debian = require("debian.menu")
 local has_fdo, freedesktop = pcall(require, "freedesktop")
 
 -- widgets
-
 local apt_widget = require("awesome-wm-widgets.apt-widget.apt-widget")
+local batteryarc_widget = require("awesome-wm-widgets.batteryarc-widget.batteryarc")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -262,6 +262,7 @@ awful.screen.connect_for_each_screen(function(s)
 		s.mytasklist, -- Middle widget
 		{ -- Right widgets
 			layout = wibox.layout.fixed.horizontal,
+			batteryarc_widget(),
 			apt_widget(),
 			mykeyboardlayout,
 			wibox.widget.systray(),
