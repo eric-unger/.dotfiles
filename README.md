@@ -13,6 +13,12 @@ sudo apt-get install -y xdg-utils
 
 ## Ubuntu - AwesomeWM
 
+### plugins
+
+```
+git clone git@github.com:streetturtle/awesome-wm-widgets.git .config/awesome/awesome-wm-widgets
+```
+
 ## TMUX 
 
 ```sh
