@@ -254,7 +254,7 @@ awful.screen.connect_for_each_screen(function(s)
 		height = 25,
 		stretch = true,
 		border_width = 0,
-		opacity = 0.7,
+		opacity = 0.8,
 	})
 
 	-- widgets
