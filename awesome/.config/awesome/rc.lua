@@ -248,7 +248,14 @@ awful.screen.connect_for_each_screen(function(s)
 	})
 
 	-- Create the wibox
-	s.mywibox = awful.wibar({ position = "top", screen = s })
+	s.mywibox = awful.wibar({
+		position = "top",
+		screen = s,
+		height = 25,
+		stretch = true,
+		border_width = 0,
+		opacity = 0.7,
+	})
 
 	-- widgets
 	local volume_widget = require("awesome-wm-widgets.volume-widget.volume")
@@ -619,3 +626,5 @@ end)
 --
 gears.wallpaper.maximized("/home/eric/Pictures/wallpapers/1.jpg")
 -- Add title bars to normal clients and dialogs
+
+awful.spawn.with_shell("picom")
