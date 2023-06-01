@@ -1,6 +1,13 @@
 #!/usr/bin/sh
 
-apt update
-apt upgrade -y
+# Creater directories
 
-apt install -y ansible
+mkdir -p ~/gitlab
+mkdir -p ~/personal
+
+sudo apt update
+sudo apt upgrade -y
+
+sudo apt install -y ansible
+
+ansible-galaxy collection install community.general
