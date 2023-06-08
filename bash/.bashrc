@@ -144,3 +144,5 @@ export LD_LIBRARY_PATH=/usr/lib/oracle/21/client64/lib
 
 export DENO_INSTALL="/home/eric/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
+
+eval "$(zoxide init bash)"
