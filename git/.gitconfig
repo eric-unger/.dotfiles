@@ -17,6 +17,7 @@
 	ca = commit --amend
 	can = commit --amend --no-edit
   co = checkout 
+  cob = checkout -b
 [core]
 	editor=nvim
 
