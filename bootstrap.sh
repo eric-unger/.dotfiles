@@ -7,6 +7,5 @@ mkdir -p ~/personal
 sudo apt update
 sudo apt upgrade -y
 
-sudo apt install -y git stow coreutils curl ripgrep luarocks
-
+sudo apt install -y git stow coreutils curl ripgrep luarocks postgresql postgresql-contrib libpq-dev
 source "$HOME/.dotfiles/install/core.sh"
