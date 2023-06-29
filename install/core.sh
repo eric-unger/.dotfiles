@@ -25,6 +25,7 @@ if ! [ -d "$HOME/.asdf" ]; then
 	asdf plugin add lazygit
 	asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
 	asdf plugin add zoxide https://github.com/nyrst/asdf-zoxide.git
+	asdf plugin-add tmux https://github.com/aphecetche/asdf-tmux.git
 	# Stow the asdf files
 	# Install what is in .tools-versions
 	asdf install
