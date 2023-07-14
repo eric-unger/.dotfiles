@@ -124,7 +124,7 @@ fi
 . $HOME/.asdf/completions/asdf.bash
 
 # Editor
-export EDITOR="/usr/bin/nvim"
+export EDITOR=nvim
 
 # Scripts directory
 export PATH="$PATH:$HOME/.bin"
@@ -146,5 +146,6 @@ export LD_LIBRARY_PATH=/usr/lib/oracle/21/client64/lib
 export DENO_INSTALL="/home/eric/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 export PATH="/home/eric/.asdf/installs/poetry/1.3.2/bin:$PATH"
+export PATH="$HOME/.local/scripts:$PATH"
 
 eval "$(zoxide init bash)"
