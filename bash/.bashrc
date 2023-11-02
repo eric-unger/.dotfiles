@@ -137,6 +137,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # Oracle
 export LD_LIBRARY_PATH=/usr/lib/oracle/21/client64/lib
+export TNS_ADMIN=$HOME/oracle/admin/
 
 # tabtab source for packages
 # uninstall by removing these lines
@@ -146,6 +147,7 @@ export LD_LIBRARY_PATH=/usr/lib/oracle/21/client64/lib
 export DENO_INSTALL="/home/eric/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 export PATH="/home/eric/.asdf/installs/poetry/1.3.2/bin:$PATH"
+export PATH="/home/eric/.asdf/installs/poetry/1.6.1/bin:$PATH"
 export PATH="$HOME/.local/scripts:$PATH"
 
 eval "$(zoxide init bash)"
