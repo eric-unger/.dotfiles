@@ -129,6 +129,9 @@ export EDITOR=nvim
 # Scripts directory
 export PATH="$PATH:$HOME/.bin"
 
+# GO
+export ASDF_GOLANG_MOD_VERSION_ENABLED=true
+
 # PNPM
 export PNPM_HOME="$HOME/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
@@ -136,8 +139,8 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # Oracle
-export LD_LIBRARY_PATH=/usr/lib/oracle/21/client64/lib
-export TNS_ADMIN=$HOME/oracle/admin/
+#export LD_LIBRARY_PATH=/usr/lib/oracle/21/client64/lib
+#export TNS_ADMIN=$HOME/oracle/admin/
 
 # tabtab source for packages
 # uninstall by removing these lines
@@ -146,8 +149,7 @@ export TNS_ADMIN=$HOME/oracle/admin/
 
 export DENO_INSTALL="/home/eric/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
-export PATH="/home/eric/.asdf/installs/poetry/1.3.2/bin:$PATH"
-export PATH="/home/eric/.asdf/installs/poetry/1.6.1/bin:$PATH"
+export PATH="/home/eric/.asdf/installs/poetry/1.7.1/bin:$PATH"
 export PATH="$HOME/.local/scripts:$PATH"
 
 eval "$(zoxide init bash)"

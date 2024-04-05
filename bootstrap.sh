@@ -14,3 +14,4 @@ sudo apt install -y git stow coreutils curl ripgrep luarocks postgresql postgres
 curl -sS https://starship.rs/install.sh | sh
 
 source "$HOME/.dotfiles/install/core.sh"
+ln -s /usr/bin/batcat ~/.local/bin/bat
