@@ -4,3 +4,5 @@
 
 vim.opt.swapfile = false
 vim.opt.conceallevel = 2
+
+vim.filetype.add({ extension = { templ = "templ" } })
