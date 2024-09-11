@@ -1,25 +1,36 @@
 [init]
-	defaultBranch = main
+  defaultBranch = main
 
 [user]
-	name = Eric Unger
-	email = mr.eric.unger@gmail.com
+  name = Eric Unger
+  email = mr.eric.unger@gmail.com
 
 [includeIf "gitdir:~/gitlab/"]
-	path = ~/gitlab/.gitconfig
+  path = ~/gitlab/.gitconfig
+
+[color]
+  ui = auto
 
 [alias]
-	s = status
-	p = push
-	pf = push --force-with-lease
-	lo = log --oneline
-	l = log --color --graph --pretty --oneline --abbrev-commit --all
-	ca = commit --amend
-	can = commit --amend --no-edit
+  s = status
+  f = fetch -p
+  p = push
+  pf = push --force-with-lease
+  lo = log --oneline
+  l = log --color --graph --pretty --oneline --abbrev-commit --all
+  ca = commit --amend
+  can = commit --amend --no-edit
   co = checkout 
   cob = checkout -b
+  undo = reset --soft HEAD~1
+
 [core]
-	editor=nvim
+  editor=nvim
+  pager = cat
+  whitespace = -trailing-space
+
+[merge]
+  ff = only
 
 [include]
   path = ~/.gitconfig-proxy
