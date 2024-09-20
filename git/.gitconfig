@@ -18,8 +18,10 @@
   pf = push --force-with-lease
   lo = log --oneline
   l = log --color --graph --pretty --oneline --abbrev-commit --all
+  c = commit
   ca = commit --amend
   can = commit --amend --no-edit
+  cana = commit --amend --no-edit -a
   co = checkout 
   cob = checkout -b
   undo = reset --soft HEAD~1
