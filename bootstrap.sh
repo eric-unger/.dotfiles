@@ -14,4 +14,7 @@ sudo apt install -y git stow coreutils curl ripgrep luarocks postgresql postgres
 curl -sS https://starship.rs/install.sh | sh
 
 source "$HOME/.dotfiles/install/core.sh"
+
+# Install zsh plugin manager
+bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
 ln -s /usr/bin/batcat ~/.local/bin/bat
