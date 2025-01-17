@@ -6,3 +6,5 @@ source "${ZINIT_HOME}/zinit.zsh"
 . $HOME/.asdf/asdf.sh
 
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

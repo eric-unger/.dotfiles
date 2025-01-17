@@ -156,9 +156,9 @@ export PATH="/home/eric/.asdf/installs/poetry/1.8.3/bin:$PATH"
 export PATH="$HOME/.local/scripts:$PATH"
 
 eval "$(starship init bash)"
-eval "$(zoxide init bash)"
-alias cd='z'
 
 # alias update-nvim-stable='asdf uninstall neovim stable && asdf install neovim stable'
 alias update-nvim-nightly='asdf uninstall neovim nightly && asdf install neovim nightly'
 alias prunelocal="git branch --merged main | grep -v '^[ *]*main$' | xargs git branch -d"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
