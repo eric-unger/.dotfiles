@@ -25,6 +25,9 @@
   co = checkout 
   cob = checkout -b
   undo = reset --soft HEAD~1
+  b = branch
+  bd = branch -d 
+  bD = branch -D
 
 [core]
   editor=nvim
