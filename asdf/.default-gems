@@ -2,4 +2,6 @@ bundler
 pry
 foreman
 neovim
+solargraph
+bundle-audit
 
