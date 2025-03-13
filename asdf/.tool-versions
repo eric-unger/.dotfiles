@@ -6,3 +6,4 @@ poetry 1.8.3
 lazygit 0.41.0
 neovim nightly
 zellij 0.40.1
+zig 0.13.0
