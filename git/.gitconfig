@@ -31,11 +31,18 @@
 
 [core]
   editor=nvim
-  pager = cat
+	pager = delta
   whitespace = -trailing-space
 
 [merge]
   ff = only
+	; conflictStyle = zdiff3
 
 [include]
   path = ~/.gitconfig-proxy
+[fetch]
+	prune = true
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
