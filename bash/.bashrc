@@ -85,7 +85,8 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-alias ll='ls -alFh'
+alias ls='eza'
+alias ll='ls -alh'
 alias la='ls -A'
 alias l='ls -CF'
 alias lg='lazygit'
@@ -119,21 +120,17 @@ if [ -f ~/.bash_envs ]; then
   . ~/.bash_envs
 fi
 
-# asdf
-# https://asdf-vm.com/guide/introduction.html
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
-
 # Editor
 export EDITOR=nvim
 
 # Scripts directory
 export PATH="$PATH:$HOME/.bin"
 
-# GO
-export ASDF_GOLANG_MOD_VERSION_ENABLED=true
+# asdf
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+. <(asdf completion bash)
 
-# PNPM
+#PNPM
 export PNPM_HOME="$HOME/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
@@ -160,5 +157,6 @@ eval "$(starship init bash)"
 # alias update-nvim-stable='asdf uninstall neovim stable && asdf install neovim stable'
 alias update-nvim-nightly='asdf uninstall neovim nightly && asdf install neovim nightly'
 alias prunelocal="git branch --merged main | grep -v '^[ *]*main$' | xargs git branch -d"
+# alias go-reshim='asdf reshim golang && export GOROOT="$(asdf where golang)/go/"'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
