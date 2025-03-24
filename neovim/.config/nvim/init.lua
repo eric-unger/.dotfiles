@@ -1,0 +1,3 @@
+-- My custom lazyvim configuration
+--
+-- To use two configurations create a new NVIM_APPNAME as an environment variables
