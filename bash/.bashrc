@@ -88,7 +88,7 @@ fi
 alias ls='eza'
 alias ll='ls -alh'
 alias la='ls -A'
-alias l='ls -CF'
+alias l='ls -F'
 alias lg='lazygit'
 alias cat='batcat'
 
@@ -125,16 +125,14 @@ export EDITOR=nvim
 
 # Scripts directory
 export PATH="$PATH:$HOME/.bin"
-
-# asdf
-export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
-. <(asdf completion bash)
-
 #PNPM
 export PNPM_HOME="$HOME/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$HOME/.local/go/bin
+export GOBIN="$HOME/.local/go/bin"
 
 # Oracle
 export ORACLE_HOME=/opt/oracle/instantclient_23_5
@@ -144,19 +142,19 @@ export PATH=$ORACLE_HOME:$PATH
 
 # tabtab source for packages
 # uninstall by removing these lines
-[ -f ~/.config/tabtab/bash/__tabtab.bash ] && . ~/.config/tabtab/bash/__tabtab.bash || true
+[ -f ~/.config/btab/bash/__tabtab.bash ] && . ~/.config/tabtab/bash/__tabtab.bash || true
 . "$HOME/.cargo/env"
 
 export DENO_INSTALL="/home/eric/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
-export PATH="/home/eric/.asdf/installs/poetry/1.8.3/bin:$PATH"
 export PATH="$HOME/.local/scripts:$PATH"
 
 eval "$(starship init bash)"
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+source <(asdf completion bash)
 
-# alias update-nvim-stable='asdf uninstall neovim stable && asdf install neovim stable'
-alias update-nvim-nightly='asdf uninstall neovim nightly && asdf install neovim nightly'
 alias prunelocal="git branch --merged main | grep -v '^[ *]*main$' | xargs git branch -d"
-# alias go-reshim='asdf reshim golang && export GOROOT="$(asdf where golang)/go/"'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
