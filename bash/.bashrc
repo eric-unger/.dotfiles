@@ -158,3 +158,4 @@ alias prunelocal="git branch --merged main | grep -v '^[ *]*main$' | xargs git b
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+source <(jj util completion bash)
