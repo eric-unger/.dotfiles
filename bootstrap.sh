@@ -41,11 +41,11 @@ brew install fzf
 brew install asdf
 brew install tmux
 brew install --cask gg
+brew install zig
 
 # Add asdf plugins
 asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git
 asdf plugin add python
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-asdf plugin add zoxide https://github.com/nyrst/asdf-zoxide.git
 # Install what is in .tools-versions
 asdf install
