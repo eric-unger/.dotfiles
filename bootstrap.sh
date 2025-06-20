@@ -23,10 +23,6 @@ stow gitlab
 stow nvim
 stow ssh
 
-# Install golang
-
-# Install asdf
-
 # Install rust
 source "install/rust.sh"
 source "scripts/.local/scripts/rust-tools.sh"
@@ -49,3 +45,7 @@ asdf plugin add python
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 # Install what is in .tools-versions
 asdf install
+
+# Install tmux plugin manager tpm
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+echo "TMUX: Press prefix + I to install the plugins"
