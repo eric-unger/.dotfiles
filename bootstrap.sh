@@ -15,14 +15,15 @@ sudo apt install -y git stow coreutils ripgrep luarocks postgresql postgresql-co
 
 # Install asdf
 
-# Install starship
-curl -sS https://starship.rs/install.sh | sh
+# Install rust
+source "install/rust.sh"
+source "scripts/.local/scripts/rust-tools.sh"
 
-source "$HOME/.dotfiles/install/core.sh"
+# source "install/core.sh"
 
 # Install zsh plugin manager
-bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
-ln -s /usr/bin/batcat ~/.local/bin/bat
+# bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
+# ln -s /usr/bin/batcat ~/.local/bin/bat
 
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
+# git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+# ~/.fzf/install
